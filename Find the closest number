@@ -1,0 +1,19 @@
+def closest(arr,x,d):
+    new = []
+    for i in range(x):
+        new.append(abs(arr[i]-d))
+    minm = min(new)
+    #print(minm)
+    k = new.index(minm)
+    #print(k)
+    print(arr[k])
+
+
+t = int(input())
+for i in range(t):
+    x, d = input().split()
+    x = int(x)
+    d = int(d)
+    arr1 = list(map(int,input().split()))
+    arr1 = arr1[::-1]
+    closest(arr1,x,d)
