@@ -1,0 +1,17 @@
+def  groupRotate(arr,n,k):    
+    for i in range(0,n,k):
+        if (i+k) < n:
+            new  = arr[i:i+k]
+        else:
+            new  = arr[i:]
+        #print(new)
+        new = new[::-1]
+        for j in range(len(new)):
+            arr[i+j] = new[j]
+    print(*arr)
+
+t = int(input())
+for i in range(t):
+    n, k = map(int,input().split())
+    arr = list(map(int, input().split()))
+    groupRotate(arr, n, k)
