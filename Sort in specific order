@@ -1,0 +1,20 @@
+#Array - Basic
+def SpecificSort(arr,n):
+    odd = []
+    even = []
+    for i in arr:
+        if i%2 == 0:
+            even.append(i)
+        else:
+            odd.append(i)
+    odd = odd[::-1]
+    arr = odd + even
+    print(*arr)
+
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    arr1 = list(map(int,input().split()))
+    arr1.sort()
+    SpecificSort(arr1,n)
