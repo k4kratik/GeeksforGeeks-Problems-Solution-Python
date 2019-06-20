@@ -1,4 +1,4 @@
-def  groupRotate(arr,n,k):    
+def groupRotate(arr,n,k):    
     for i in range(0,n,k):
         if (i+k) < n:
             new  = arr[i:i+k]
