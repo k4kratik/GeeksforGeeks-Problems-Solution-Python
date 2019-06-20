@@ -10,7 +10,8 @@ def pendu(arr,n):
         else:
             new.insert(0,arr[i])
         i += 1
-    print(*new)
+    print(" ".join(list(map(str, new))))
+    #print(*new)
         
 n = int(input())
 for i in range(n):
