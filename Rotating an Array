@@ -1,0 +1,19 @@
+def rotateArr(arr,x,d):Rotating an Array
+    newArr = [0]*x
+    p =0
+    for i in range(x):
+        if i < x-d:
+            newArr[i] = arr[i+d]
+        else:
+            newArr[i] = arr[p]
+            p=p+1
+            
+            
+    print(*newArr)
+    
+n = int(input())
+for i in range(n):
+    x = int(input())
+    arr1 = list(map(int,input().split()))
+    d = int(input())
+    rotateArr(arr1,x,d)
