@@ -1,3 +1,4 @@
+#array- Basic
 def closest(arr,x,d):
     new = []
     for i in range(x):
