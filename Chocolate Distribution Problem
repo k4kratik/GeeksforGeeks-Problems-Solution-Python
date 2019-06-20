@@ -1,0 +1,18 @@
+def Choclate(arr,n,d):
+    diff = list()
+    arr.sort()
+    i=0
+    j=d-1
+    while(j<n):    
+        diff_v = arr[j] - arr[i]
+        diff.append(diff_v)
+        i+=1
+        j+=1
+    print(min(diff))    
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    arr1 = list(map(int,input().split()))
+    d = int(input())
+    Choclate(arr1,n,d)
