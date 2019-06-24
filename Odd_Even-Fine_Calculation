@@ -1,0 +1,28 @@
+def checkEven(num):
+    if num%2 == 0:
+        return True
+    else:
+        return False
+
+def findfine(cars,penalties,n,date):
+    count = 0
+    if checkEven(date):
+        for i in range(n):
+            if not checkEven(cars[i]):
+                count += penalties[i]
+            else:
+                pass
+    else:
+        for i in range(n):
+            if checkEven(cars[i]):
+                count += penalties[i]
+            else:
+                pass
+    return count
+    
+t = int(input())
+for i in range(t):
+    n, date = map(int,input().split())
+    cars = list(map(int, input().split()))
+    penalties = list(map(int, input().split()))
+    print(findfine(cars,penalties,n,date))
